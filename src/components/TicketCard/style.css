@@ -1,0 +1,76 @@
+.ticket {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px 43px 25px 39px;
+    background-color: #E8EBF2;
+    border-radius: 10px; 
+    gap: 25px;
+}
+
+.ticket-info-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ticket-info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    width: 150px;
+}
+
+.ticket__price {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700; 
+    margin-top: 8px;
+}
+
+.ticket__text_light {
+    color: #858AE3;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.ticket__text_dark {
+    font-size: 16px;
+    font-weight: 500; 
+}
+
+.header-block__icon {
+    width: 200px;
+}
+
+.icon_pobeda {
+    width: 160px;
+    height: 26px; 
+}
+
+.icon_red-wings {
+    width: 180px;
+    height: 51px;  
+}
+
+.icon_s7 {
+    width: 143px;
+    height: 46px;  
+}
+
+@media (max-width: 768px) {
+    .icon_pobeda {
+        width: 118px;
+        height: 19px;  
+    }
+    
+    .icon_red-wings {
+        width: 132.75px;
+        height: 37.6125px;  
+    }
+    
+    .icon_s7 {
+        width: 105.4625px;
+        height: 33.925px;  
+    }
+}

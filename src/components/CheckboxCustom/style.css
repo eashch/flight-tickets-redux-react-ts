@@ -1,0 +1,65 @@
+.checkbox {
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
+    margin-left: 23px;
+}
+
+.checkbox_curtain {
+    margin-left: 0px;
+}
+
+.checkbox__title {
+    color: #858AE3;
+    font-size: 16px;
+    font-weight: 500; 
+}
+
+.checkbox__title_curtain {
+    color: #F7F9F7;
+}
+
+.checkbox__input_hidden {
+    display:none;
+}
+
+.checkbox__input + label {
+    cursor: pointer;
+    background:url('') no-repeat;
+    height: 21px;
+    width: 21px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    border: 1px solid #4E148C;
+}
+
+.checkbox__input_curtain + label {
+    border: 1px solid #F7F9F7;
+}
+
+.checkbox__input_regular + label {
+    border-radius: 4px;
+}
+
+.checkbox__input_regular:checked + label {
+    background:url('../../assets/tick-mark.png') no-repeat;
+    background-position: center; 
+}
+
+.checkbox__input_curtain:checked + label {
+    background-color: #F7F9F7;
+}
+
+.checkbox__input_round + label {
+    border-radius: 50%;
+}
+
+.checkbox__input_round:checked + label {
+    background:url('../../assets/circle.svg') no-repeat;
+    background-position: center; 
+}
+
+.checkbox__input_round.checkbox__input_curtain:checked + label {
+    background:url('../../assets/circle_white.svg') no-repeat;
+    background-position: center; 
+}

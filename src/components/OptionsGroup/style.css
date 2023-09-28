@@ -1,0 +1,17 @@
+.left-block {
+    display: flex;
+    flex-direction: column;
+    gap: 47px;
+}
+
+@media (max-width: 1100px) {
+    .left-block {
+        display: none;
+    }
+}
+
+.curtain-options {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
