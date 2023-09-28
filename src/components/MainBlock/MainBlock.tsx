@@ -11,14 +11,10 @@ function MainBlock() {
     const settings = useSelector((state: RootState) => state.settings);
     const tickets = ticketsSelectors.selectAll(store.getState())
 
-    const filterByField = (options: string[] | number[], filter: string | number) => {
+    const filterByField = (options: (string|number)[], filter: string | number) => {
         if (options.length === 0)
             return true;
-        for (const option of options) {
-            if (option === filter)
-                return true;
-        }
-        return false;
+        return options.includes(filter);
     }
 
     const displayTickets = (): JSX.Element[] => {
@@ -33,9 +29,9 @@ function MainBlock() {
                 tickets.sort((a, b) => a.connectionAmount - b.connectionAmount)
                 break;
         };
-        var companies = tickets.filter(
+        const companies = tickets.filter(
             (value) => filterByField(settings.companies, value.company));
-        var connections = companies.filter(
+        const connections = companies.filter(
             (value) => filterByField(settings.connections, value.connectionAmount));
         return connections.map((ticket: ITicket) => {
             return (<TicketCard
